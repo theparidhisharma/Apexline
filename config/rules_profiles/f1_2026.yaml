@@ -1,0 +1,8 @@
+# Sporting-code escalation profile (2026 guideline shape).
+name: F1-style 2026
+steps: [warn1, warn2, bw_flag, p5s, p10s]
+notes: >
+  1st-2nd offence: team notified (warning). 3rd: black-and-white flag.
+  4th and subsequent: 5 s each (10 s cap step here for demo).
+advantage_heuristic_s: [0.2, 0.3]
+quali_rule: lap_deleted            # V1: lap (optionally +next) invalidated

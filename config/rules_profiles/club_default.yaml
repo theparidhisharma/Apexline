@@ -1,0 +1,5 @@
+name: Club / national default
+steps: [warn1, warn2, warn3, bw_flag, p5s]
+notes: Gentler ladder for club events; edit freely — the ledger FSM reads this file.
+advantage_heuristic_s: [0.3, 0.5]
+quali_rule: lap_deleted

@@ -1,0 +1,4 @@
+clip,expected_incidents,class
+data/clips_src/golden.mp4,3,clear
+data/clips_src/clean_laps.mp4,0,clear
+data/clips_src/marginal_01.mp4,1,marginal

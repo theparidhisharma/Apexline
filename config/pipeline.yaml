@@ -1,0 +1,20 @@
+# APEXLINE pipeline configuration — thresholds live here, not in code.
+video:
+  sample_stride: 3          # 30fps source -> 10 fps effective (CPU-honest)
+  resolution_cap: 720
+model:
+  weights: yolov8n.pt        # swap to weights/apexline_yolov8n_ft.pt after Colab fine-tune
+  seg_weights: yolov8n-seg.pt
+  conf: 0.25
+  imgsz: 960
+  device: null               # null=auto · "mps" on MacBook · "cpu" on the i7
+fsm:
+  k_out: 3                  # consecutive out-samples to enter VIOLATING
+  m_in: 2                   # consecutive in-samples to close the incident
+confidence:
+  bands: { auto_clear: 0.35, auto_flag: 0.75 }
+physics:
+  a_plausible_g: 7.0        # teleport rejection bound (deliberately loose)
+  a_max_interp: 60.0        # m/s^2 for the delta = a*dt^2/8 gating envelope
+calibration:
+  residual_freeze_px: 3.0   # above this, auto-actions freeze (review-only mode)
