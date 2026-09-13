@@ -1,0 +1,20 @@
+# secrets — NEVER commit
+.env
+web/.env.local
+
+# data & models (manifests only)
+data/openf1_cache/
+data/clips/
+data/clips_src/
+data/sim/
+data/*.db
+weights/
+*.pt
+*.parquet
+
+# build junk
+__pycache__/
+*.pyc
+node_modules/
+web/dist/
+.DS_Store
